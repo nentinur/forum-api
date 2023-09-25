@@ -1,19 +1,19 @@
 /* eslint-disable camelcase */
 exports.up = (pgm) => {
-  pgm.createTable('threads', {
+  pgm.createTable('thread-comments', {
     id: {
       type: 'VARCHAR(50)',
       primaryKey: true,
     },
-    title: {
-      type: 'text',
-      notNull: true,
-    },
-    body: {
+    content: {
       type: 'TEXT',
       notNull: true,
     },
     user_id: {
+      type: 'TEXT',
+      notNull: true,
+    },
+    thread_id: {
       type: 'TEXT',
       notNull: true,
     },
@@ -25,5 +25,5 @@ exports.up = (pgm) => {
 };
 
 exports.down = (pgm) => {
-  pgm.dropTable('threads');
+  pgm.dropTable('thread-comments');
 };
