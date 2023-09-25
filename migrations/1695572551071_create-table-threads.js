@@ -18,7 +18,7 @@ exports.up = (pgm) => {
       notNull: true,
     },
     date: {
-      type: 'TIMESTAMP',
+      type: 'TEXT',
       notNull: true,
     },
   });
